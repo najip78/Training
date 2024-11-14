@@ -1,0 +1,25 @@
+body {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 400;
+}
+h1 {
+  font-style: normal;
+  color: rgb(0, 23, 55);
+  font-size: small;
+  font-weight: thin;
+  line-height: 29px;
+}
+.wlcm {
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(152, 154, 156);
+
+  line-height: 29px;
+}
+label {
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(0, 23, 55);
+
+  line-height: 29px;
+}
