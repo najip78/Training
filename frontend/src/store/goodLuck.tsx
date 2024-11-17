@@ -1,17 +1,19 @@
+import { message } from "antd";
 import { create } from "zustand";
 
 // Define the structure of the store
 interface goodLuck {
-  message: string;
+  message?: string | undefined;
   sender: string;
   setMessage: (message: string) => void;
-}
-
-// Create the Zustand store with a dynamic initial message
-const goodluck = create<goodLuck>((set) => ({
-  message: "",  // Start with an empty message or dynamic initialization
-  sender: "Zustand",
-  setMessage: (message: string) => set({ message }),  // Function to update the message
+  setSender: (sender: string) => void;
+ }
+// Create the Zustand store
+ const useGoodLuckStore = create<goodLuck>((set) => ({
+  sender: "someone",
+  setMessage: (message) => set((state) => ({...state, message })),
+  setSender: (sender) => set((state) => ({...state, sender })),
 }));
 
-export default goodluck;
+export default useGoodLuckStore
+

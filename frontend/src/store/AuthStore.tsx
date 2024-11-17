@@ -1,7 +1,7 @@
 import { create } from "zustand";
-import { AuthState, trdata } from "../types/UseAuthStore";
+import { AuthState} from "../types/UseAuthStore";
 
-const useAuthStore = create<AuthState>((set) => ({
+const UseAuthStore = create<AuthState>((set) => ({
     isAuthenticated: false,
     user: null,
     login: (user) => set({ isAuthenticated: true, user }),
@@ -25,5 +25,5 @@ const goodluck = create<goodLuck>((set) => ({
 }));
 
   
-export default useAuthStore ;
+export default UseAuthStore
   
